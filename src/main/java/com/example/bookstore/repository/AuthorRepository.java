@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface AuthorRepository extends JpaRepository<Author, Long> {
     @Query(
             "select a from Author a " +
-                    "  left join fetch Book b " +
+                    "  left join fetch Book b" +
                     "  where a.id = :id"
     )
     Author findByIdWithBooks(@RequestParam Long id);

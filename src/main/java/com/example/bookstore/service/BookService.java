@@ -62,6 +62,7 @@ public class BookService {
                 () -> new RuntimeException("Book not found, id = " + book.getId())
         );
         existing.setName(book.getName());
+        existing.setRead(book.isRead());
         Author author = authorRepository.findById(book.getAuthorId()).orElseThrow(
                 () -> new RuntimeException("Author not found, author id = " + book.getAuthorId())
         );

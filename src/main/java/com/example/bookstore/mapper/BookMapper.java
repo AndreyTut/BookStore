@@ -11,6 +11,7 @@ public class BookMapper {
         bookDto.setName(book.getName());
         bookDto.setAuthorId(book.getAuthor().getId());
         bookDto.setAuthorName(book.getAuthor().getName());
+        bookDto.setRead(book.isRead());
         return bookDto;
     }
 }

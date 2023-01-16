@@ -5,6 +5,7 @@ public class BookDto {
     private String name;
     private String authorName;
     private Long authorId;
+    private boolean isRead;
 
     public Long getId() {
         return id;
@@ -36,5 +37,13 @@ public class BookDto {
 
     public void setAuthorId(Long authorId) {
         this.authorId = authorId;
+    }
+
+    public boolean isRead() {
+        return isRead;
+    }
+
+    public void setRead(boolean read) {
+        isRead = read;
     }
 }

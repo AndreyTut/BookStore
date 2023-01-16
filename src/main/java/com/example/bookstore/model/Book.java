@@ -21,6 +21,8 @@ public class Book {
     @JoinColumn(name = "author_id")
     private Author author;
 
+    private boolean isRead;
+
     public Long getId() {
         return id;
     }
@@ -43,5 +45,13 @@ public class Book {
 
     public void setAuthor(Author author) {
         this.author = author;
+    }
+
+    public boolean isRead() {
+        return isRead;
+    }
+
+    public void setRead(boolean read) {
+        isRead = read;
     }
 }
